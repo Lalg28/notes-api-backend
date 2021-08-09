@@ -37,6 +37,8 @@ app.get('/', (req, response) => {
 app.get('/api/notes', (req, res) => {
   Note.find({}).then((notes) => {
     res.json(notes)
+  }).catch((err) => {
+    console.log(err)
   })
 })
 
