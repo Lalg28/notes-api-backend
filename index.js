@@ -29,7 +29,7 @@ app.use(Sentry.Handlers.requestHandler())
 app.use(Sentry.Handlers.tracingHandler())
 
 // Pagina de inicio
-app.get('/', (response) => {
+app.get('/', (req, response) => {
   response.send('<h1>Hello world</h1>')
 })
 
